@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        input[type="button"]:active {
+          transform: scale(0.95); /* Slightly reduce size */
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Change shadow for pressed look */
+        }
+      </style>
+  </head>
+  <body class="h-screen w-screen p-0 m-0 bg-blue-100">
+    <div
+      class="container p-0 m-0 w-screen h-screen flex justify-center items-center" >
+      <div class="calculator bg-gray-800 rounded-lg p-4">
+        <form>
+          <div class="displayArea">
+            <input
+              type="text"
+              placeholder=" 0"
+              name="display"
+              class="mb-6 rounded-md h-14 text-end pr-4 text-2xl bg-gray-100 xs:text-xl xm:h-12 xm:p-3 xm:mb-4"
+            />
+          </div>
+          <div class="buttons">
+            <input
+              type="button"
+              value="AC"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-blue-500 xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value = '' "
+            />
+            <input
+              type="button"
+              value="DE"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-blue-500 xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value = display.value.toString().slice(0,-1)"
+            />
+            <input
+              type="button"
+              value="."
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-blue-500 xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '.' "
+            />
+            <input
+              type="button"
+              value="/"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-blue-500 xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '/' "
+            />
+          </div>
+          <div class="buttons">
+            <input
+              type="button"
+              value="7"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '7' "
+            />
+
+            <input
+              type="button"
+              value="8"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '8' "
+            />
+            <input
+              type="button"
+              value="9"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '9' "
+            />
+            <input
+              type="button"
+              value="*"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-blue-500 xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '*' "
+            />
+          </div>
+          <div class="buttons">
+            <input
+              type="button"
+              value="4"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '4' "
+            />
+            <input
+              type="button"
+              value="5"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '5' "
+            />
+            <input
+              type="button"
+              value="6"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '6' "
+            />
+            <input
+              type="button"
+              value="-"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-blue-500 xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '-' "
+            />
+          </div>
+          <div class="buttons">
+            <input
+              type="button"
+              value="1"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '1' "
+            />
+            <input
+              type="button"
+              value="2"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '2' "
+            />
+            <input
+              type="button"
+              value="3"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '3' "
+            />
+            <input
+              type="button"
+              value="+"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-blue-500 xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '+' "
+            />
+          </div>
+          <div class="buttons">
+            <input
+              type="button"
+              value="00"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '00' "
+            />
+            <input
+              type="button"
+              value="0"
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-14 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-white xs:p-2 sm:m-1 xs:h-12 xs:w-12 xs:text-lg"
+              onclick="display.value += '0' "
+            />
+            <input
+              type="button"
+              value="="
+              class="bg-transparent cursor-pointer p-3 m-2 rounded-md h-14 w-32 text-center border-[0.1px] border-gray-700 shadow-[10px_10px_10px_rgba(0,0,0,0.7)] text-xl text-blue-500 xs:p-2 xs:m-1 xs:h-12 xs:w-28 xs:text-lg"
+              onclick="display.value = eval(display.value)"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

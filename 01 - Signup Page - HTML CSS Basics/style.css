@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
+
+/* Reset margin, padding, and enable box-sizing for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set font for the body with bold weight */
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+}
+
+/* Full-screen outer container with gradient background */
+.outer-box{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top left, #3e85ff, #a8f5ff9e);
+}
+
+/* Centered inner container with padding, background, and shadow */
+.inner-box{
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%; /* Start at 50% down the page */
+    transform: translateY(-50%); /* Adjust for exact vertical centering */
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px #212121;
+    z-index: 2; /* Keep box in front of other elements */
+}
+
+/* Center-align the header text */
+.signup-header{
+    text-align: center;
+}
+
+/* Styling for the main heading */
+.signup-header h1{
+    font-size: 2.5rem;
+    color: #212121;
+}
+
+/* Styling for the subtext under the heading */
+.signup-header p{
+    font-size: 1rem;
+    color: #555;
+    margin: 7px auto 40px auto;
+}
+
+/* Add space around the form body */
+.signup-body{
+    margin: 20px 0px;
+}
+
+/* Display labels above input fields */
+.signup-body p label{
+    display: block;
+}
+
+/* Input fields with padding, border, and spacing */
+.signup-body p input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Style the submit button */
+.signup-body p input[type="submit"]{
+    background-color: #3498db;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Change the submit button color on hover */
+.signup-body p input[type="submit"]:hover{
+    background-color: #2d6e99;
+}
+
+/* Center the footer text */
+.signup-footer p{
+    color: #555;
+    text-align: center;
+}
+
+/* Style the link in the footer */
+.signup-footer p a{
+    color: #2d6e99;
+}
+
+/* Circular elements for decorative purposes */
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px; /* Makes the shape circular */
+    background-image: linear-gradient(to right, #ffffff33, #ffffffff);
+    position: absolute;
+}
+
+/* Positioning of individual circles */
+.c1{
+    bottom: 100px;
+    left: 50px;
+}
+.c2{
+    bottom: 5px;
+    right: 300px;
+}
+.c3{
+    top: 10px;
+    left: 300px;
+}
+.c4{
+    top: 90px;
+    right: 60px;
+}
