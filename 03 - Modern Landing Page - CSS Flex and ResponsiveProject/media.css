@@ -1,0 +1,176 @@
+/*_____________MEDIA QUERIES & RESPONSIVENESS________*/
+
+.container {
+    overflow: hidden;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 1055px) {
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .main-nav{
+        overflow: initial;
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: white;
+        padding-block: 20px;
+        width: 100%;
+        top:100%; 
+        left: -100%;  /*hidden*/
+        transition: 0.2s ease-in-out;
+    }
+    .nav-links.active{
+        left: -5%;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+    }
+
+    .example-card {
+        width: calc(50% - 10px);
+        height: 180px;
+    }
+
+    .example-area {
+        gap: 20px;
+    }
+
+    .cta-section {
+        padding-block: 70px;
+    }
+    .feature-description p{
+        font-size: 16.5px;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .primary-button{
+        width:100%;
+        text-align: center;
+    }
+    .header-section{
+        flex-direction: column-reverse;
+    }
+    .header-left{
+        max-width: 100vw;
+        text-align: center;
+    }
+    .header-right img{
+        width: 100%;
+    }
+    .features-card{
+        min-width: 50%;
+    }
+    .big-feature-container{
+        flex-direction: column !important;
+    }
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .footer-columns{
+        align-items: center;
+    }
+    .sec-btn-of-example{
+        width:100%;
+    }
+    .features-section{
+        background-size: 80%;
+    }   
+}
+
+@media screen and (max-width:480px) {
+    :root{
+       --padding-inline-section: 10px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    
+    h2{
+        font-size: 1.5rem;
+    }
+    
+    h3{
+        font-size: 1.2rem;
+    }
+    .features-card{
+        min-width: 100%;
+    }
+    .logos{
+        flex-direction: column;
+
+    } 
+    .logos img{
+        height:55px;
+        width: fit-content;
+    }
+    .features-section{
+        background-size: 90%;
+    }   
+    .example-card{
+        width: 85%;
+    }
+    .example-area{
+        justify-content: center;
+    }
+    .sub-footer-container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .company-logo{
+        height: 25px;
+        width: fit-content;
+    }
+    .main-nav{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .sub-footer-container{
+        flex-direction: column;
+    }
+    h1{
+        font-size: 1.7rem;
+    }
+    
+    h2{
+        font-size: 1.3rem;
+    }
+    
+    h3{
+        font-size: 1rem;
+    }
+    .logos img{
+        height:50px;
+        width: fit-content;
+    }
+}

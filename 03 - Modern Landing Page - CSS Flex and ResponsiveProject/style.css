@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+/* ______________Presets:___________________  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+    line-height: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--primary-text-color);
+}
+
+ul{
+    list-style: none;
+}
+
+/* ___________________Utility Classes___________________ */
+
+.text{
+    font-size: 0.9rem;
+}
+
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.primary-button{
+    background-color: var(--accent-color);
+    color:white;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 12px 24px;
+    letter-spacing: 1.2px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition:0.2s ease-out;
+}
+
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+    color: white !important;
+}
+
+.secondary-button{
+    border:0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    padding: 9px 22px;
+    transition: 0.2s ease-out;
+}
+
+.secondary-button:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* __________________top-banner__________________________ */
+
+.banner-text{
+    color:white;
+    padding: 12px 30px;
+    text-align: center;
+}
+
+.top-banner{
+    background-image: url("./assets/asset\ 18.png");
+    background-color: #4fb3d4;
+    background-size: 300px;
+}
+
+
+/* _______________________Navigation Bar ______________________ */
+
+.main-nav{
+    justify-content:space-between;
+    margin-top: 8px;
+    margin-left:40px;
+    margin-right:40px;
+    position: relative;
+
+}
+
+.company-logo{
+    width: 210px;
+}
+
+.nav-links ul{
+    justify-content: end;
+    gap: 30px;
+}
+
+.hover-links:hover{
+    color:var(--accent-color);
+    transition: 0.2s ease-in-out;
+}
+
+/* _______________________Header Section ______________________ */
+
+header{
+    padding: 50px var(--padding-inline-section);
+    margin-left:30px;
+    margin-right:40px;
+}
+
+.header-section{
+    justify-content: center;
+    gap: 37px
+}
+
+.header-left{
+    max-width: 50vw;
+}
+
+.header-left h1{
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.header-left p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header-right img{
+    margin-left: 20px;
+    width: 100%
+}
+
+/* _________Companies Section_______________ */
+.companies-header{
+    text-align: center;
+    color:var(--primary-text-color);
+    font-size: 17px;
+}
+
+.logos img{
+    height: 60px;
+}
+
+
+.logos{
+    margin-top:20px;
+    justify-content: space-evenly;
+    margin-left: 27px;
+    margin-right: 27px;
+    flex-wrap: wrap;
+    gap:15px;
+}
+
+/* ____________Features Section______________ */
+
+.features-section{
+    padding-top: 70px;
+    background-image: url(./assets/asset\ 19.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}   
+
+.features-header{
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: larger;
+}
+
+.features-header h3{
+    margin-bottom: 16px;
+}
+
+.features-card{
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.features-area{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+}
+
+.features-card img{
+    height: 46px;
+    width:46px;
+}
+/* ___________Big Feature Section_____________*/
+
+.big-feature-section{
+    padding: 7px var(--padding-inline-section);
+}
+
+.big-feature-container{
+    gap:20px;
+}
+
+.feature-img img{
+    width:100%;
+}
+
+.feature-description{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.feature-description p{
+    font-size: 19.5px;
+}
+
+/* ___________Example Section_____________*/
+
+.example-header{
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.example-card{
+    width:23%;
+    position:relative;
+    height:300px;
+    background-color: black;
+    border-radius: 15px;
+    background-size: cover;
+    background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.9)), url(./assets/asset\ 37.jpeg);
+    background-size: cover;
+}
+.example-card:hover{
+    box-shadow: 0 0 10px rgb(110, 105, 105);
+    transition: 0.2s ease-in-out;
+}
+
+.example-card:nth-child(2){
+    background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.9)), url(./assets/asset\ 36.jpeg);
+    background-size: cover;
+}
+.example-card:nth-child(3){
+    background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.9)), url(./assets/asset\ 38.jpeg);
+    background-size: cover;
+}
+.example-card:nth-child(4){
+    background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.9)), url(./assets/asset\ 39.jpeg);
+    background-size: cover;
+}
+
+.card-text{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    right:20px;
+    color:white;
+}
+
+.example-area{
+    justify-content: space-between;
+    margin-block: 30px;
+    flex-wrap: wrap;
+}
+
+/* ___________CTA Section_____________*/
+
+.cta-section{
+    padding: 100px var(--padding-inline-section) 80px;
+    background-color: #183b54;
+}
+
+.cta-section-container{
+    flex-direction: column;
+    gap: 40px;
+    color: white;
+}
+.cta-section-container p{
+    color:white;
+    font-size: larger;
+    text-align: center;
+}
+
+/* ___________Footer Section_____________*/
+
+.footer-section{
+    padding-top: 70px;
+    padding-bottom:70px;
+    background-color: #ebf2fa;
+}
+
+.footer-container{
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+.footer-columns{
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+
+/* ___________Sub Footer Section_____________*/
+
+.sub-footer{
+    padding-top: 22px;
+    padding-bottom: 22px;
+    background-color: #b9cde4;
+}
+
+.sub-footer-container{
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
