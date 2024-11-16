@@ -214,7 +214,7 @@ button,
 input:where([type="button"]),
 input:where([type="reset"]),
 input:where([type="submit"]) {
-  -webkit-appearance: button;
+  appearance: button;
   background-color: transparent;
   background-image: none;
 }
@@ -232,7 +232,7 @@ progress {
   height: auto;
 }
 [type="search"] {
-  -webkit-appearance: textfield;
+  -appearance: textfield;
   outline-offset: -2px;
 }
 ::-webkit-search-decoration {
@@ -306,7 +306,20 @@ object,
 svg,
 video {
   display: block;
-  vertical-align: middle;
+  /* vertical-align: midbutton,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    appearance: button;
+  }button,
+  input:where([type="button"]),
+  input:where([type="reset"]),
+  input:where([type="submit"]) {
+    -webkit-appearance: button;
+    appearance: button;
+    background-color: transparent;
+    background-image: none;
+  }dle; */
 }
 img,
 video {
@@ -486,7 +499,20 @@ video {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-  .xs\:text-xl {
+  .xs\:text-xl {[type="search"] {
+    appearance: textfield;
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+  }
+  ::-webkit-search-decoration {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  ::-webkit-file-upload-button {
+    appearance: button;
+    -webkit-appearance: button;
+    font: inherit;
+  }
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
